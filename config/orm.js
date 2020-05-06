@@ -24,6 +24,13 @@ const orm = {
 
     return rows;
   },
+  findById: async function (table, col, id) {
+    const sql = "SELECT * FROM ?? WHERE ?? = ?";
+
+    const [rows] = await connection.query(sql, [table, col, id]);
+
+    return rows;
+  },
 };
 
 module.exports = orm;

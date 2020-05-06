@@ -30,6 +30,15 @@ class Burger {
       .catch(console.error);
     return updatedBurger;
   }
+
+  static async find(id) {
+    let item;
+    await orm
+      .findById("burgers", "id", id)
+      .then((row) => (item = row))
+      .catch(console.error);
+    return item;
+  }
 }
 
 module.exports = Burger;

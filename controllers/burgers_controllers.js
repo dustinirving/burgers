@@ -27,10 +27,10 @@ router.post("/api/burgers", async function (req, res) {
 });
 
 router.patch("/api/burgers/:id", async function (req, res) {
+  let burger = await Burger.find(req.params.id);
+  if (!burger) return res.status(404).end();
   try {
-    let burger = await Burger.update(req.params.id);
-    // burger = await Object.assign(burger, req.body, { id: req.params.id });
-    // console.log(burger);
+    await Burger.update(req.params.id);
     res.status(200).json(burger);
   } catch (err) {
     res.status(500).json(err);
