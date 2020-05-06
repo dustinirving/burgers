@@ -22,11 +22,11 @@ class Burger {
       .catch(console.error);
     return newBurger;
   }
-  async update() {
+  static async update(id) {
     let updatedBurger;
-    orm
-      .updateOne("burgers", "burger_name", "updatedBurger")
-      .then((rows) => console.table(rows))
+    await orm
+      .updateOne("burgers", "devoured", true, "id", id)
+      .then((rows) => (updatedBurger = rows))
       .catch(console.error);
     return updatedBurger;
   }

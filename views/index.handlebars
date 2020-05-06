@@ -2,7 +2,9 @@
 <div class="columnDiv">
     <ul>
         {{#each burgers}}
+        {{#unless devoured}}
         <li>{{burger_name}}</li>
+        {{/unless}}
         {{/each}}
     </ul>
 </div>
@@ -12,7 +14,9 @@
 <div class=" columnDiv">
     <ul>
         {{#each burgers}}
-        <li><button>Eat</button></li>
+        {{#unless devoured}}
+        <li><button class="eat-button" data-id="{{id}}" data-devoured="{{devoured}}">Eat</button></li>
+        {{/unless}}
         {{/each}}
     </ul>
 </div>
@@ -21,6 +25,11 @@
 {{!-- Eaten burgers --}}
 <div class="columnDiv">
     <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        <li>{{burger_name}}</li>
+        {{/if}}
+        {{/each}}
     </ul>
 </div>
 

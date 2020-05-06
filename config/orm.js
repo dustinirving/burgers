@@ -16,10 +16,11 @@ const orm = {
     return rows;
   },
 
-  updateOne: async function (table, col, value) {
-    const sql = "UPDATE ?? SET ?? = ?";
+  updateOne: async function (table, col1, value, col2, id) {
+    console.log();
+    const sql = "UPDATE ?? SET ?? = ? WHERE ?? = ? ";
 
-    const [rows] = await connection.query(sql, [table, col, value]);
+    const [rows] = await connection.query(sql, [table, col1, value, col2, id]);
 
     return rows;
   },
