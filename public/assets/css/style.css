@@ -1,0 +1,24 @@
+.title {
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: black solid 1px;
+}
+
+.columnDiv {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+
+.columnDiv ul {
+  list-style: none;
+}
+
+.formDiv {
+  text-align: center;
+}

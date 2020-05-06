@@ -15,16 +15,19 @@ class Burger {
   }
   async insert() {
     let newBurger;
-    orm
+    await orm
       .insertOne("burgers", "burger_name", "newBurger")
       .then((row) => console.table(row))
       .catch(console.error);
+    return newBurger;
   }
   async update() {
+    let updatedBurger;
     orm
       .updateOne("burgers", "burger_name", "updatedBurger")
       .then((rows) => console.table(rows))
       .catch(console.error);
+    return updatedBurger;
   }
 }
 
