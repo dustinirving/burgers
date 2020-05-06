@@ -5,21 +5,24 @@ class Burger {
     this.burger_name = burger_name;
     this.devoured = devoured;
   }
+  static async select() {
+    orm
+      .selectAll("burgers")
+      .then((rows) => console.table(rows))
+      .catch(console.error);
+  }
+  async insert() {
+    orm
+      .insertOne("burgers", "burger_name", "newBurger")
+      .then((rows) => console.table(rows))
+      .catch(console.error);
+  }
+  async update() {
+    orm
+      .updateOne("burgers", "burger_name", "updatedBurger")
+      .then((rows) => console.table(rows))
+      .catch(console.error);
+  }
 }
 
-orm
-  .selectAll("burgers")
-  .then((rows) => console.table(rows))
-  .catch(console.error);
-
-orm
-  .insertOne("burgers", "burger_name", "newBurger")
-  .then((rows) => console.table(rows))
-  .catch(console.error);
-
-orm
-  .updateOne("burgers", "burger_name", "updatedBurger")
-  .then((rows) => console.table(rows))
-  .catch(console.error);
-
-module.exports = burger;
+module.exports = Burger;
