@@ -1,3 +1,4 @@
+{{!-- Burgers --}}
 <div class="columnDiv">
     <ul>
         {{#each burgers}}
@@ -5,6 +6,9 @@
         {{/each}}
     </ul>
 </div>
+
+
+{{!-- Eat burger buttons --}}
 <div class=" columnDiv">
     <ul>
         {{#each burgers}}
@@ -12,13 +16,20 @@
         {{/each}}
     </ul>
 </div>
+
+
+{{!-- Eaten burgers --}}
 <div class="columnDiv">
     <ul>
     </ul>
 </div>
-<div class="formDiv">
-    <form>
-        <input type="text">
-        <button>Submit</button>
+
+
+
+{{!-- Add a new burger --}}
+<div class="form-div" id="form-div">
+    <form id="new-burger-form">
+        <input id="burger-input" type="text" name="name" placeholder="Add a burger">
+        <button id="new-burger-button" type="submit">Submit</button>
     </form>
 </div>

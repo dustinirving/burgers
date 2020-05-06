@@ -9,7 +9,7 @@ const orm = {
   },
 
   insertOne: async function (table, col, value) {
-    const sql = "INSERT INTO burgers SET ?? = ?";
+    const sql = "INSERT INTO ?? SET ?? = ?";
 
     const [rows] = await connection.query(sql, [table, col, value]);
 
