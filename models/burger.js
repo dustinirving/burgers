@@ -6,15 +6,18 @@ class Burger {
     this.devoured = devoured;
   }
   static async select() {
-    orm
+    let burgers;
+    await orm
       .selectAll("burgers")
-      .then((rows) => console.table(rows))
+      .then((rows) => (burgers = rows))
       .catch(console.error);
+    return burgers;
   }
   async insert() {
+    let newBurger;
     orm
       .insertOne("burgers", "burger_name", "newBurger")
-      .then((rows) => console.table(rows))
+      .then((row) => console.table(row))
       .catch(console.error);
   }
   async update() {

@@ -5,7 +5,6 @@ const orm = {
     const sql = "SELECT * FROM ??";
 
     const [rows] = await connection.query(sql, [table]);
-
     return rows;
   },
 

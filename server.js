@@ -17,7 +17,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Route handling
-// app.use(require("./controllers/burgers_controllers"));
+app.use(require("./controllers/burgers_controllers"));
 
 // Setting the port for the deployed version or local instance
 const PORT = process.env.PORT || 3000;
