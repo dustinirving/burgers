@@ -1,9 +1,11 @@
+/* Setting the background color, font and margin for the body */
 body {
   background-color: yellow;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* The title of the page */
 .title {
   margin-top: 0;
   margin-left: 0;
@@ -13,43 +15,53 @@ body {
   text-align: center;
 }
 
+/* Header colors */
 header {
   background-color: red;
   color: white;
 }
 
+/* The main container for the page  */
 .container {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Grid wrapper for the two main columns */
 .wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
 
+/* A smaller wrapper for the items in the columns */
 .list-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
+/* burger card with an image and paragraph tags */
 .burger-card {
   text-align: center;
 }
 
+/* Burger image */
 .burger-img {
   max-width: 15%;
 }
 
+/* The title of the burger in the burger card */
 .burger-text {
   margin-top: 0;
   padding: 0;
 }
+
+/* Div to contain the buttons */
 .button-div {
   justify-self: center;
 }
 
+/* Button to eat the burgers */
 .eat-button {
   height: 4rem;
   width: 4rem;
@@ -60,17 +72,20 @@ header {
   font-size: 1.5rem;
 }
 
+/* Div wrapping the burgers that have been eaten */
 .eaten-div {
   text-align: center;
   opacity: 0.25;
 }
 
+/* Div to wrap the form to create burgers */
 .form-div {
   grid-column: 1/3;
   margin-top: 3rem;
   justify-self: center;
 }
 
+/* Submit button to create new burgers */
 .burger-submit {
   border-radius: 10%;
   background-color: saddlebrown;
@@ -78,6 +93,7 @@ header {
   border: none;
 }
 
+/* Burger input and burger submit button  */
 .burger-input,
 .burger-submit {
   display: inline-block;

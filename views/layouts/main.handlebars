@@ -1,20 +1,25 @@
+{{!-- Main Handlebars template --}}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+    {{!-- Title --}}
     <title>Burgers</title>
 </head>
 
 <body>
+    {{!-- Main header of the page --}}
     <header>
         <h1 class="title">Burgers</h1>
     </header>
+
+    {{!-- Index handlebars to be inserted --}}
     <div class="container">
         {{{ body }}}
     </div>
-    <audio id="audio" src="../assets/img/chew.wav"></audio>
+    {{!-- Add the script to the HTML --}}
     <script src="../assets/js/script.js"></script>
 </body>
 

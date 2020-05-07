@@ -1,15 +1,19 @@
-{{!-- Burgers --}}
+{{!-- Wrapper --}}
 <div class="wrapper">
+
+    {{!-- Burgers --}}
+    {{!-- Column 1 --}}
     <div class="column-div">
         <div class="list-wrapper">
+            {{!-- Insert all the burgers if devoured is false --}}
             {{#each burgers}}
             {{#unless devoured}}
-
+            {{!-- Burger card with image and burger name --}}
             <div class="burger-card">
                 <img class="burger-img" src="../assets/img/burger.png">
                 <p class="burger-text">{{burger_name}}</p>
             </div>
-
+            {{!-- Eat button --}}
             <div class="button-div">
                 <button class="eat-button" data-id="{{id}}" data-devoured="{{devoured}}">Eat</button>
             </div>
@@ -20,10 +24,13 @@
     </div>
 
     {{!-- Eaten burgers --}}
+    {{!-- Column 2 --}}
     <div class="column-div">
         <div>
+            {{!-- Insert all the burgers if devoured is true --}}
             {{#each burgers}}
             {{#if devoured}}
+            {{!-- Burger card with image and burger name --}}
             <div class="eaten-div">
                 <img class="burger-img" src="../assets/img/burger.png">
                 <p class="burger-text">{{burger_name}}</p>
@@ -36,7 +43,9 @@
 
 
     {{!-- Add a new burger --}}
+    {{!-- Spans both columns --}}
     <div class="form-div" id="form-div">
+        {{!-- Form to submit a burger with an input and a button --}}
         <form id="new-burger-form">
             <input class="burger-input" id="burger-input" type="text" name="name" placeholder="Create a burger">
             <button class="burger-submit" id="new-burger-button" type="submit">Create</button>
