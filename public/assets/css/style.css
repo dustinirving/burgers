@@ -2,22 +2,56 @@
   text-align: center;
 }
 
+header {
+  padding: 0.1 rem;
+}
+
 .container {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.columnDiv {
-  display: inline-block;
-  width: 33%;
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.list-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+/* .burger {
+  align-content: middle;
+} */
+
+.nested-div {
   text-align: center;
 }
 
-.columnDiv ul {
-  list-style: none;
+.eat-button {
+  height: 4rem;
+  width: 4rem;
+}
+
+.eaten-div {
+  text-align: center;
+  align-content: center;
+  opacity: 0.25;
 }
 
 .form-div {
-  text-align: center;
+  grid-column: 1/3;
+  margin-top: 3rem;
+  justify-self: center;
+}
+
+.burger-submit {
+  height: 2rem;
+}
+
+.burger-input {
+  height: 1.5rem;
 }

@@ -15,7 +15,6 @@ class Burger {
   }
   async insert(burger) {
     let newBurger;
-    console.log(burger);
     await orm
       .insertOne("burgers", "burger_name", burger)
       .then((row) => (newBurger = row))

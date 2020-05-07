@@ -1,44 +1,43 @@
 {{!-- Burgers --}}
-<div class="columnDiv">
-    <ul>
-        {{#each burgers}}
-        {{#unless devoured}}
-        <li>{{burger_name}}</li>
-        {{/unless}}
-        {{/each}}
-    </ul>
-</div>
+<div class="wrapper">
+    <div class="column-div">
+        <div class="list-wrapper">
+            {{#each burgers}}
+            {{#unless devoured}}
+            <div class="nested-div burger">
+                <img src="../assets/img/burger.png" style="height: 45px; width: 45px;">
+                <p>{{burger_name}}</p>
+            </div>
+            <div class="nested-div">
+                <button class="eat-button" data-id="{{id}}" data-devoured="{{devoured}}">Eat</button>
+            </div>
 
+            {{/unless}}
+            {{/each}}
+        </div>
+    </div>
 
-{{!-- Eat burger buttons --}}
-<div class=" columnDiv">
-    <ul>
-        {{#each burgers}}
-        {{#unless devoured}}
-        <li><button class="eat-button" data-id="{{id}}" data-devoured="{{devoured}}">Eat</button></li>
-        {{/unless}}
-        {{/each}}
-    </ul>
-</div>
-
-
-{{!-- Eaten burgers --}}
-<div class="columnDiv">
-    <ul>
-        {{#each burgers}}
-        {{#if devoured}}
-        <li>{{burger_name}}</li>
-        {{/if}}
-        {{/each}}
-    </ul>
-</div>
+    {{!-- Eaten burgers --}}
+    <div class="column-div">
+        <div>
+            {{#each burgers}}
+            {{#if devoured}}
+            <div class="eaten-div burger">
+                <img src="../assets/img/burger.png" style="height: 50px; width: 50px;">
+                <p>{{burger_name}}</p>
+            </div>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
 
 
 
-{{!-- Add a new burger --}}
-<div class="form-div" id="form-div">
-    <form id="new-burger-form">
-        <input id="burger-input" type="text" name="name" placeholder="Add a burger">
-        <button id="new-burger-button" type="submit">Submit</button>
-    </form>
+    {{!-- Add a new burger --}}
+    <div class="form-div" id="form-div">
+        <form id="new-burger-form">
+            <input class="burger-input" id="burger-input" type="text" name="name" placeholder="Add a burger">
+            <button class="burger-submit" id="new-burger-button" type="submit">Submit</button>
+        </form>
+    </div>
 </div>
