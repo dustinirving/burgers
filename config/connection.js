@@ -19,4 +19,4 @@ connection.connect();
 
 // Export the connection as a promise
 
-module.exports = connection;
+module.exports = connection.promise();
