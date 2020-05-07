@@ -4,11 +4,13 @@
         <div class="list-wrapper">
             {{#each burgers}}
             {{#unless devoured}}
-            <div class="nested-div burger">
-                <img src="../assets/img/burger.png" style="height: 45px; width: 45px;">
-                <p>{{burger_name}}</p>
+
+            <div class="burger-card">
+                <img class="burger-img" src="../assets/img/burger.png">
+                <p class="burger-text">{{burger_name}}</p>
             </div>
-            <div class="nested-div">
+
+            <div class="button-div">
                 <button class="eat-button" data-id="{{id}}" data-devoured="{{devoured}}">Eat</button>
             </div>
 
@@ -22,9 +24,9 @@
         <div>
             {{#each burgers}}
             {{#if devoured}}
-            <div class="eaten-div burger">
-                <img src="../assets/img/burger.png" style="height: 50px; width: 50px;">
-                <p>{{burger_name}}</p>
+            <div class="eaten-div">
+                <img class="burger-img" src="../assets/img/burger.png">
+                <p class="burger-text">{{burger_name}}</p>
             </div>
             {{/if}}
             {{/each}}
@@ -36,8 +38,8 @@
     {{!-- Add a new burger --}}
     <div class="form-div" id="form-div">
         <form id="new-burger-form">
-            <input class="burger-input" id="burger-input" type="text" name="name" placeholder="Add a burger">
-            <button class="burger-submit" id="new-burger-button" type="submit">Submit</button>
+            <input class="burger-input" id="burger-input" type="text" name="name" placeholder="Create a burger">
+            <button class="burger-submit" id="new-burger-button" type="submit">Create</button>
         </form>
     </div>
 </div>

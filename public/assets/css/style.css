@@ -1,9 +1,21 @@
+body {
+  background-color: yellow;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .title {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
 header {
-  padding: 0.1 rem;
+  background-color: red;
+  color: white;
 }
 
 .container {
@@ -20,25 +32,36 @@ header {
 .list-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
 }
 
-/* .burger {
-  align-content: middle;
-} */
-
-.nested-div {
+.burger-card {
   text-align: center;
+}
+
+.burger-img {
+  max-width: 15%;
+}
+
+.burger-text {
+  margin-top: 0;
+  padding: 0;
+}
+.button-div {
+  justify-self: center;
 }
 
 .eat-button {
   height: 4rem;
   width: 4rem;
+  background-color: saddlebrown;
+  border: none;
+  border-radius: 10%;
+  color: white;
+  font-size: 1.5rem;
 }
 
 .eaten-div {
   text-align: center;
-  align-content: center;
   opacity: 0.25;
 }
 
@@ -49,9 +72,14 @@ header {
 }
 
 .burger-submit {
-  height: 2rem;
+  border-radius: 10%;
+  background-color: saddlebrown;
+  color: white;
+  border: none;
 }
 
-.burger-input {
-  height: 1.5rem;
+.burger-input,
+.burger-submit {
+  display: inline-block;
+  font-size: 1.75rem;
 }

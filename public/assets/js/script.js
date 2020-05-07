@@ -14,9 +14,17 @@ document.getElementById("form-div").addEventListener("submit", (event) => {
   });
 });
 
+//Eating Sound
+
+// function play() {
+//   let audio = document.getElementById("audio");
+//   audio.play();
+// }
+
 // Eating a burger
 document.querySelectorAll(".eat-button").forEach((button) => {
   button.addEventListener("click", function (event) {
+    event.preventDefault();
     const id = this.getAttribute("data-id");
     const devoured = this.getAttribute("data-devoured");
     fetch(`/api/burgers/${id}`, {
@@ -25,7 +33,6 @@ document.querySelectorAll(".eat-button").forEach((button) => {
       body: JSON.stringify({ devoured: devoured }),
     }).then((response) => {
       if (response.ok) location.reload();
-      console.log(response);
     });
   });
 });
