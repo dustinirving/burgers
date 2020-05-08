@@ -1,5 +1,7 @@
 # Burgers
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This is a full stack MVC application made with MYSQL, Express and Express Handlebars. In this application you can create new burgers with a customised name and then eat them.
 
 https://dashboard.heroku.com/apps/ancient-bastion-45823
