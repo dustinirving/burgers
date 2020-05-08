@@ -4,6 +4,8 @@ This is a full stack MVC application made with MYSQL, Express and Express Handle
 
 https://dashboard.heroku.com/apps/ancient-bastion-45823
 
+![Burgers](./public/assets/images-gifs/burgers.gif)
+
 1. [Installation](#Installation)
 2. [Usage](#Usage)
 3. [License](#License)

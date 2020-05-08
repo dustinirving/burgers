@@ -1,3 +1,6 @@
+// Dotenv
+require("dotenv").config();
+
 // Get access to the mysql npm packages
 const mysql = require("mysql2");
 let connection;
@@ -8,9 +11,9 @@ if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
   connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "hyeonmi91",
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
     database: "burgers_db",
   });
 }
