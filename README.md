@@ -4,7 +4,7 @@
 
 This is a full stack MVC application made with MYSQL, Express and Express Handlebars. In this application you can create new burgers with a customised name and then eat them.
 
-https://dashboard.heroku.com/apps/ancient-bastion-45823
+https://ancient-bastion-45823.herokuapp.com/
 
 ![Burgers](./public/assets/images-gifs/burgers.gif)
 
